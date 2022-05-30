@@ -5,20 +5,29 @@ module.exports = {
     ],
 
     theme: {
-        fontFamily: {
-            
-        },
 
-        screens:{
-            'xs': '360px',
-            'sm': '640px',
-            'md': '768px',
-            'lg': '1024px',
-            'xl': '1280px',
-            '2xl': '1536px',
-            'carouselWidth': '700px'
+        extend: {
+            fontSize: {
+                'titleText': '4vw'
+            },
+
+            spacing: {
+                '1/5': '20%',
+                '1/6': '16%',
+                '1/7': '14%'
+            },
+
+            fontFamily: {
+                'Bigshot': ['Bigshot One', 'cursive'],
+                'Bungee': ['Bungee Shade', 'cursive'],
+                'CinzelDecorative': ['Cinzel Decorative', 'cursive'],
+                'FasterOne': ['Faster One', 'cursive'],
+                'GreatVibes': ['Great Vibes', 'cursive'],
+                'Rye': ['Rye', 'cursive'],
+                'Tapestry': ['Tapestry', 'cursive'],
+            },
         }
     },
 
     plugins: [],
-}
+  }
