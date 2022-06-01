@@ -5,6 +5,7 @@ import heroImage from '../public/driving.jpg';
 import titleText from '../public/title.svg';
 import basicMember from '../public/basic_membership.png';
 import premiumMember from '../public/premium_membership.png';
+import MembershipTabs from '../components/membershipTabs';
 
 const Home: NextPage = () => {
   return (
@@ -48,11 +49,13 @@ const Home: NextPage = () => {
             </div>
         </header>
 
+        {/* Mission Statement Section */}
         <section>
             <div className='text-center m-6'>
                 <h5 className='mb-6'>Get To Know Us</h5>
                 <h4 className='mb-6 text'>Our Statement</h4>
-                <p className='max-w-[800px] mx-auto text-left'>It is our mission at Membership Direct to provide an additional solution to alleviate 
+                <p className='max-w-[800px] mx-auto text-left'>
+                    It is our mission at Membership Direct to provide an additional solution to alleviate 
                     the financial burdens that accidents can cause. For a low annual membership fee, 
                     users will be able to choose their membership type that can be redeemed at any approved 
                     auto repair shop of their choosing, after successfully filing a claim with their insurance 
@@ -61,11 +64,12 @@ const Home: NextPage = () => {
             </div>
         </section>
 
+        {/* Membership Section */}
         <section>
             <div className='text-center mt-24'>
                 <h4>2 Membership Types</h4>
                 <div className='flex flex-row justify-center'>
-                    <div className='w-[400px]'>
+                    <button className='w-[400px]'>
                         <Image
                             src={basicMember}
                             layout='responsive'
@@ -73,9 +77,9 @@ const Home: NextPage = () => {
                             height={1}
                             priority
                         />
-                    </div>
-                    
-                    <div className='w-[400px]'>
+                    </button>
+                        
+                    <button className='w-[400px]'>
                         <Image
                             src={premiumMember}
                             layout='responsive'
@@ -83,8 +87,12 @@ const Home: NextPage = () => {
                             height={1}
                             priority
                         />
-                    </div>
+                    </button>
                 </div>
+            </div>
+
+            <div>
+                <MembershipTabs />
             </div>
         </section>
         
