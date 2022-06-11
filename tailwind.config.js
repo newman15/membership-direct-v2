@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: [
@@ -7,6 +8,10 @@ module.exports = {
     ],
 
     theme: {
+        screens: {
+            'xs': '390px',
+            ...defaultTheme.screens,
+        },
 
         extend: {
             fontSize: {
