@@ -18,7 +18,7 @@ export default function MembershipRequirements() {
 
     return (
         <div>
-            <ul>
+            <ul className='ml-[10%]'>
                 <li className={listItemStyles}>
                     <div className='w-6'>
                         {checkMarks}
@@ -55,6 +55,9 @@ export default function MembershipRequirements() {
                 </li>
             </ul>
             
+            <button className='m-6 p-2 border-4 border-[#306076] rounded-xl text-white bg-[#306076]'>
+                Ready To Join?
+            </button>
             
         </div>
     )

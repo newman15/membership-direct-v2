@@ -2,14 +2,19 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
+import MembershipTabs from '../components/homePage/membershipTabs';
+import MembershipRequirements from '../components/homePage/membershipRequirements';
+import Footer from '../components/homePage/footer';
+
 import heroImage from '../public/images/driving.jpg';
 import titleText from '../public/images/title.svg';
 import basicMember from '../public/images/basic_membership.png';
 import premiumMember from '../public/images/premium_membership.png';
-import MembershipTabs from '../components/homePage/membershipTabs';
 import roads1 from '../public/images/roads.jpg';
-import MembershipRequirements from '../components/homePage/membershipRequirements';
-import footerImage from '../public/images/footer.svg';
+import footer from '../public/images/footer.svg';
+import moneyInHand from '../public/images/money_in_hand.jpg';
+import ImageSlideshow from '../components/homePage/imageSlideshow';
+
 
 const Home: NextPage = () => {
     return (
@@ -105,14 +110,18 @@ const Home: NextPage = () => {
                         priority
                     />
 
-                    <div className='absolute top-[8%] left-[15%] right-[15%] bottom-[8%] border-4 rounded-md bg-[#72707093] text-[4.5vw] overflow-auto'>
-                        <p className='p-6'>
+                    <div className='absolute top-[8%] left-[15%] right-[15%] bottom-[8%] border-4 rounded-md bg-[#72707093] overflow-auto'>
+                        <p className='pl-6 pt-6'>Find Out More About Us</p>
+
+                        <h4 className='pl-6 pt-2'>Why Become A Member?</h4>
+
+                        <p className='pl-6 pt-4'>
                             As automotive insurance prices continue to rise, we are 
                             here to offer additional financial options to alleviate 
                             out-of-pocket costs.
                         </p>
 
-                        <p className='p-6'>
+                        <p className='pl-6 pt-4'>
                             Most people are unprepared financially for the burdens of 
                             high deductible costs before their insurance provider begins 
                             contributions. We provide our members financial security and 
@@ -120,7 +129,7 @@ const Home: NextPage = () => {
                             out-of-pocket repair expenses.
                         </p>
 
-                        <p className='p-6'>
+                        <p className='pl-6 pt-4'>
                             We are reshaping the auto industry and want to take you along 
                             for the ride!
                         </p>
@@ -138,7 +147,11 @@ const Home: NextPage = () => {
                     />
 
                     <div>
-                        <div className='absolute top-[8%] left-[15%] right-[60%] bottom-[8%] border-4 rounded-md bg-[#72707093] text-[1.5vw] overflow-auto'>
+                        <div className='absolute top-[8%] left-[10%] right-[60%] bottom-[8%] border-4 rounded-md bg-[#72707093] overflow-auto'>
+                            <p className='pl-6 pt-6'>Find Out More About Us</p>
+
+                            <h4 className='pl-6 pt-2'>Why Become A Member?</h4>
+
                             <p className='p-6'>
                                 As automotive insurance prices continue to rise, we are 
                                 here to offer additional financial options to alleviate 
@@ -159,25 +172,8 @@ const Home: NextPage = () => {
                             </p>
                         </div>
 
-                        <div className='absolute top-[8%] left-[60%] right-[15%] bottom-[8%] border-4 rounded-md bg-[#72707093] text-[1.5vw] overflow-auto'>
-                            <p className='p-6'>
-                                As automotive insurance prices continue to rise, we are 
-                                here to offer additional financial options to alleviate 
-                                out-of-pocket costs.
-                            </p>
-
-                            <p className='p-6'>
-                                Most people are unprepared financially for the burdens of 
-                                high deductible costs before their insurance provider begins 
-                                contributions. We provide our members financial security and 
-                                peace of mind by offering up to an average 80% savings on 
-                                out-of-pocket repair expenses.
-                            </p>
-
-                            <p className='p-6'>
-                                We are reshaping the auto industry and want to take you along 
-                                for the ride!
-                            </p>
+                        <div className='absolute top-[8%] left-[60%] right-[10%] bottom-[8%] border-4 rounded-md bg-[#72707093] overflow-auto'>
+                            <ImageSlideshow />
                         </div>
                     </div>                    
                 </div>
@@ -193,20 +189,25 @@ const Home: NextPage = () => {
                         Becoming a member takes only a few minutes. Simply choose from one of our 
                         membership plans and make sure you have the following readily available.
                     </p>
-                    <div className='ml-[10%]'><MembershipRequirements /></div>
+                    <div><MembershipRequirements /></div>
                 </div>
             </section>
 
             </main>
 
+            {/* Footer and Contact Section */}
             <footer>
-                <Image
-                    src={footerImage}
-                    layout='responsive'
-                    width={1}
-                    height={1}
-                    priority
-                />
+                <div className='relative w-full h-[400px] md:h-[600px]'>
+                    <Image
+                        src={footer}
+                        layout='fill'
+                        priority
+                    />
+
+                    <div className='absolute top-[15%] left-[10%] right-[10%] md:left-[20%] md:right-[20%]'>
+                        <Footer />
+                    </div>
+                </div>
             </footer>
         </div>
     )
