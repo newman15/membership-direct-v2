@@ -10,7 +10,7 @@ export default function ImageSlideshow() {
     const imageTexts = [
         'We help you save money!',
         'We provide assistance on unforseen out of pocket repair bills.',
-        'Travel with peace of mind, knowing you are covered',
+        'Travel with peace of mind knowing you are covered',
         'See where the road takes you...'
     ];
 
@@ -18,11 +18,18 @@ export default function ImageSlideshow() {
     const [image, setImage] = useState(images[0]);
     const [text, setText] = useState(imageTexts[0]);
 
-    const textClass = `
-    ${indexCounter % 4 === 2 ? 'text-slate-300' : 'text-black'} 
-    absolute top-[8%] left-[15%] right-[15%] text-center
-    `;
-
+    /*
+    * Important Note:
+    *
+    * This function runs twice on images[0] before continuing the slide show. 
+    * Reason: On first render images[0] is used, then the useEffect hook calls the
+    * slideShow() function and indexCounter is still 0. After the first call to 
+    * slideShow(), the indexCounter is incremented and everything works as expected.
+    * 
+    * The 'textClass' above uses a comparison === '1' to account for this issue since 
+    * the indexCounter is behind the render. The textClass is applying this condition
+    * to the first element, images[0], in the array technically, but uses '1' due to the above issue.
+    */
     const slideShow = () => {
         let i = indexCounter % 4;
         console.log(`Index of Image = ${i}`);
@@ -40,11 +47,12 @@ export default function ImageSlideshow() {
         <div className='relative w-full h-full'>
             <Image
                 src={image}
+                alt='Slideshow Image'
                 layout='fill'
                 priority
             />
 
-            <h4 className={textClass}>{text}</h4>
+            <h4 className='text-white textShadow absolute top-[8%] left-[15%] right-[15%] text-center'>{text}</h4>
         </div>
     )
 }

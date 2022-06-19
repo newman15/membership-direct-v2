@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Bungee+Shade&family=Cinzel+Decorative&family=Faster+One&family=Great+Vibes&family=Rye&family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Cinzel+Decorative&family=Rye&family=Tapestry&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .textShadow{
+        text-shadow: 4px 4px 4px black;
+    }
+}

@@ -8,10 +8,11 @@ export default function Footer() {
 
     return (
         <div className='border-4 border-black rounded-xl bg-white'>
-            <h5 className='text-center mt-6 mb-6'>CONTACT US</h5>
+            <h5 className='text-center mt-6 mb-6 font-Tapestry'>CONTACT US</h5>
             <div className='w-8 mx-auto'>
                 <Image
                     src={contactsIcon}
+                    alt='Contact Icon'
                     layout='intrinsic'
                     width={100}
                     height={100}
@@ -19,11 +20,12 @@ export default function Footer() {
                 />
             </div>
 
-            <h5 className='text-center mt-6 mb-6'>RESOURCES</h5>
+            <h5 className='text-center mt-6 mb-6 font-Tapestry'>RESOURCES</h5>
             <div className='flex flex-row justify-between mx-[20%] mb-6'>
                 <div className='w-8'>
                     <Image
                         src={infoIcon}
+                        alt='Info Icon'
                         layout='intrinsic'
                         width={100}
                         height={100}
@@ -33,6 +35,7 @@ export default function Footer() {
                 <div className='w-8'>
                     <Image
                         src={businessIcon}
+                        alt='Business Icon'
                         layout='intrinsic'
                         width={100}
                         height={100}
@@ -42,6 +45,7 @@ export default function Footer() {
                 <div className='w-8'>
                     <Image
                         src={folderIcon}
+                        alt='Folder Icon'
                         layout='intrinsic'
                         width={100}
                         height={100}

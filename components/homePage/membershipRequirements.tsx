@@ -9,6 +9,7 @@ export default function MembershipRequirements() {
     const checkMarks = (
         <Image
             src={checkMark}
+            alt='Check Mark'
             layout='responsive'
             width={1}
             height={1}

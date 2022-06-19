@@ -26,10 +26,7 @@ module.exports = {
 
             fontFamily: {
                 'Bigshot': ['Bigshot One', 'cursive'],
-                'Bungee': ['Bungee Shade', 'cursive'],
                 'CinzelDecorative': ['Cinzel Decorative', 'cursive'],
-                'FasterOne': ['Faster One', 'cursive'],
-                'GreatVibes': ['Great Vibes', 'cursive'],
                 'Rye': ['Rye', 'cursive'],
                 'Tapestry': ['Tapestry', 'cursive'],
             },

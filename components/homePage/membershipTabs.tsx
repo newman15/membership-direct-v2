@@ -49,12 +49,13 @@ export default function MembershipTabs() {
 
             <div>
                 <div className={`${basicMember ? 'mt-6' : 'hidden'}`}>
-                    <h5 className='text-center'>Basic Membership</h5>
+                    <h5 className='text-center font-CinzelDecorative font-bold'>Basic Membership</h5>
                     <ul className='ml-[10%] mt-6'>
                         <li className='flex flex-row items-baseline'>
                             <div className='w-6'>
                                 <Image
                                     src={star}
+                                    alt='Star Image'
                                     layout='responsive'
                                     width={1}
                                     height={1}
@@ -65,17 +66,18 @@ export default function MembershipTabs() {
                             
                         </li>
                         <li>Average Driver Deductible</li>
-                        <li className='mb-6'>Ideal for the driver who's out of pocket deductible is $500 or less</li>
+                        <li className='mb-6'>Ideal for the driver who&apos;s out of pocket deductible is $500 or less</li>
                     </ul>
                 </div>
 
                 <div className={`${premiumMember ? 'mt-6' : 'hidden'}`}>
-                    <h5 className='text-center'>Premium Membership</h5>
+                    <h5 className='text-center font-CinzelDecorative font-bold'>Premium Membership</h5>
                     <ul className='ml-[10%] mt-6'>
                         <li className='flex flex-row items-baseline'>
                             <div className='w-6'>
                                 <Image
                                     src={dollarSign}
+                                    alt='Dollar Sign Image'
                                     layout='responsive'
                                     width={1}
                                     height={1}
@@ -86,12 +88,13 @@ export default function MembershipTabs() {
                             
                         </li>
                         <li>High Driver Deductible</li>
-                        <li className='mb-6'>Ideal for the driver who's out of pocket deductible is $1000 or more</li>
+                        <li className='mb-6'>Ideal for the driver who&apos;s out of pocket deductible is $1000 or more</li>
                     </ul>
                 </div>
 
-                <div className={`${existingMember ? 'mt-6' : 'hidden'}`}>
-                    <h5 className='text-center'>Already a valued member?</h5>
+                <div className={`${existingMember ? 'mt-6 text-center' : 'hidden'}`}>
+                    <h5 className='text-center font-CinzelDecorative font-bold'>Already a valued member?</h5>
+                    <button className='m-6 px-6 py-2 border-4 border-[#306076] rounded-xl text-white bg-[#306076]'>Login</button>
                 </div>
             </div>
         </div>

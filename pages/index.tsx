@@ -12,7 +12,6 @@ import basicMember from '../public/images/basic_membership.png';
 import premiumMember from '../public/images/premium_membership.png';
 import roads1 from '../public/images/roads.jpg';
 import footer from '../public/images/footer.svg';
-import moneyInHand from '../public/images/money_in_hand.jpg';
 import ImageSlideshow from '../components/homePage/imageSlideshow';
 
 
@@ -32,6 +31,7 @@ const Home: NextPage = () => {
                 <div className='relative top-0 left-0'>
                     <Image
                         src={heroImage}
+                        alt='Hero Image'
                         layout='responsive'
                         width={100}
                         height={40}
@@ -39,9 +39,10 @@ const Home: NextPage = () => {
                     />
 
 
-                    <div className='absolute w-[50%] top-[1%] left-[25%]'>
+                    <div className='absolute w-[50%] top-[1%] left-[25%] right-[25%]'>
                         <Image
                             src={titleText}
+                            alt='Company Name'
                             layout='responsive'
                             width={1}
                             height={.20}
@@ -54,8 +55,8 @@ const Home: NextPage = () => {
             {/* Mission Statement Section */}
             <section className='max-w-[800px] mx-auto'>
                 <div className='text-center m-6'>
-                    <h5 className='mb-6'>Get To Know Us</h5>
-                    <h4 className='mb-6 text'>Our Statement</h4>
+                    <h5 className='mb-6 font-Bigshot'>Get To Know Us</h5>
+                    <h4 className='mb-6 text font-Rye'>Our Statement</h4>
                     <p className='text-left'>
                         It is our mission at Membership Direct to provide an additional solution to alleviate 
                         the financial burdens that accidents can cause. For a low annual membership fee, 
@@ -69,11 +70,12 @@ const Home: NextPage = () => {
             {/* Membership Section */}
             <section className='max-w-[800px] mx-auto'>
                 <div className='text-center mt-24'>
-                    <h4>2 Membership Types</h4>
+                    <h4 className='font-Rye'>2 Membership Types</h4>
                     <div className='flex flex-row justify-center'>
                         <button className='w-[400px]'>
                             <Image
                                 src={basicMember}
+                                alt='Basic Membership'
                                 layout='responsive'
                                 width={1}
                                 height={1}
@@ -84,6 +86,7 @@ const Home: NextPage = () => {
                         <button className='w-[400px]'>
                             <Image
                                 src={premiumMember}
+                                alt='Premium Membership'
                                 layout='responsive'
                                 width={1}
                                 height={1}
@@ -104,6 +107,7 @@ const Home: NextPage = () => {
                 <div className='md:hidden relative top-0 left-0'>
                     <Image
                         src={roads1}
+                        alt='Road Background Image'
                         layout='responsive'
                         width={1}
                         height={2.1}
@@ -111,7 +115,7 @@ const Home: NextPage = () => {
                     />
 
                     <div className='absolute top-[8%] left-[15%] right-[15%] bottom-[8%] border-4 rounded-md bg-[#72707093] overflow-auto'>
-                        <p className='pl-6 pt-6'>Find Out More About Us</p>
+                        <p className='pl-6 pt-6 font-Bigshot'>Find Out More About Us</p>
 
                         <h4 className='pl-6 pt-2'>Why Become A Member?</h4>
 
@@ -140,6 +144,7 @@ const Home: NextPage = () => {
                 <div className='hidden md:block md:relative md:top-0 md:left-0'>
                     <Image
                         src={roads1}
+                        alt='Roads Background Image'
                         layout='responsive'
                         width={1}
                         height={.6}
@@ -148,9 +153,9 @@ const Home: NextPage = () => {
 
                     <div>
                         <div className='absolute top-[8%] left-[10%] right-[60%] bottom-[8%] border-4 rounded-md bg-[#72707093] overflow-auto'>
-                            <p className='pl-6 pt-6'>Find Out More About Us</p>
+                            <h6 className='pl-6 pt-6 font-Bigshot'>Find Out More About Us</h6>
 
-                            <h4 className='pl-6 pt-2'>Why Become A Member?</h4>
+                            <h4 className='pl-6 pt-2 font-Rye'>Why Become A Member?</h4>
 
                             <p className='p-6'>
                                 As automotive insurance prices continue to rise, we are 
@@ -183,8 +188,8 @@ const Home: NextPage = () => {
             {/* Becoming A Member Section */}
             <section className='max-w-[800px] mx-auto'>
                 <div className='text-center m-6'>
-                    <h6 className='mb-6'>Becoming A Member</h6>
-                    <h5 className='mb-6'>What you'll need to qualify</h5>
+                    <h6 className='mb-6 font-Bigshot'>Becoming A Member</h6>
+                    <h5 className='mb-6 font-Rye'>What you&apos;ll need to qualify</h5>
                     <p className='text-left ml-[10%] mr-[10%] mb-6'>
                         Becoming a member takes only a few minutes. Simply choose from one of our 
                         membership plans and make sure you have the following readily available.
@@ -200,6 +205,7 @@ const Home: NextPage = () => {
                 <div className='relative w-full h-[400px] md:h-[600px]'>
                     <Image
                         src={footer}
+                        alt='Footer Image'
                         layout='fill'
                         priority
                     />
