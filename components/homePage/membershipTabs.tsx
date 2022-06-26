@@ -94,7 +94,7 @@ export default function MembershipTabs() {
 
                 <div className={`${existingMember ? 'mt-6 text-center' : 'hidden'}`}>
                     <h5 className='text-center font-CinzelDecorative font-bold'>Already a valued member?</h5>
-                    <button className='m-6 px-6 py-2 border-4 border-[#306076] rounded-xl text-white bg-[#306076]'>Login</button>
+                    <button className='m-6 px-6 py-2 border-4 border-[#306076] rounded-xl text-white bg-[#306076] disabled:opacity-50' disabled>Login</button>
                 </div>
             </div>
         </div>
