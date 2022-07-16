@@ -39,7 +39,7 @@ const Home: NextPage = () => {
                     />
 
 
-                    <div className='absolute w-[50%] top-[1%] left-[25%] right-[25%]'>
+                    <div className='absolute w-[50%] top-[1%] left-[30%] right-[30%]'>
                         <Image
                             src={titleText}
                             alt='Company Name'
