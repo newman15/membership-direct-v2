@@ -6,50 +6,39 @@ import MembershipTabs from '../components/homePage/membershipTabs';
 import MembershipRequirements from '../components/homePage/membershipRequirements';
 import Footer from '../components/homePage/footer';
 
-import heroImage from '../public/images/driving.jpg';
-import titleText from '../public/images/title.svg';
+import heroImage from '../public/images/heroImage.svg';
 import basicMember from '../public/images/basic_membership.png';
 import premiumMember from '../public/images/premium_membership.png';
 import roads1 from '../public/images/roads.jpg';
 import footer from '../public/images/footer.svg';
 import ImageSlideshow from '../components/homePage/imageSlideshow';
+import Router from 'next/router';
 
 
 const Home: NextPage = () => {
+    const goToMembershipsPage = (e: React.MouseEvent) => {
+        e.preventDefault();
+        Router.push('/memberships');
+    }
+
     return (
         <div>
             <Head>
-            <title>Membership Direct</title>
-            <meta name="description" content="Vehicle Repair Deductible Membership" />
-            <link rel="icon" href="/favicon.ico" />
+                <title>Membership Direct</title>
+                <meta name="description" content="Vehicle Repair Deductible Membership" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main>
 
             {/* Hero Image with title text */}
             <header>
-                <div className='relative top-0 left-0'>
-                    <Image
-                        src={heroImage}
-                        alt='Hero Image'
-                        layout='responsive'
-                        width={100}
-                        height={40}
-                        priority
-                    />
-
-
-                    <div className='absolute w-[50%] top-[1%] left-[30%] right-[30%]'>
-                        <Image
-                            src={titleText}
-                            alt='Company Name'
-                            layout='responsive'
-                            width={1}
-                            height={.20}
-                            priority
-                        />
-                    </div>
-                </div>
+                <Image
+                    src={heroImage}
+                    alt='Hero Image'
+                    layout='responsive'
+                    priority
+                />
             </header>
 
             {/* Mission Statement Section */}
@@ -72,7 +61,7 @@ const Home: NextPage = () => {
                 <div className='text-center mt-24'>
                     <h4 className='font-Rye'>2 Membership Types</h4>
                     <div className='flex flex-row justify-center'>
-                        <button className='w-[400px]'>
+                        <button className='w-[400px]' onClick={goToMembershipsPage}>
                             <Image
                                 src={basicMember}
                                 alt='Basic Membership'
@@ -83,7 +72,7 @@ const Home: NextPage = () => {
                             />
                         </button>
                             
-                        <button className='w-[400px]'>
+                        <button className='w-[400px]' onClick={goToMembershipsPage}>
                             <Image
                                 src={premiumMember}
                                 alt='Premium Membership'
@@ -110,7 +99,7 @@ const Home: NextPage = () => {
                         alt='Road Background Image'
                         layout='responsive'
                         width={1}
-                        height={2.1}
+                        height={2}
                         priority
                     />
 
@@ -147,7 +136,7 @@ const Home: NextPage = () => {
                         alt='Roads Background Image'
                         layout='responsive'
                         width={1}
-                        height={.6}
+                        height={.45}
                         priority
                     />
 
